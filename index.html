@@ -18,20 +18,244 @@
         <li><a href="#contact">Contact</a></li>
       </ul>   
     </nav>
+    <nav id="mobile-nav">
+      <div class="mobile-name">Niklas Rötkönen</div>
+      <div class="mobile-menu">
+        <div class="mobile-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
     <section id="profile">
-      <div class="name">Niklas Rötkönen</div>
+      <div class="section-pic-container">
+        <img src="assets/outdoors.png" alt="Niklas Rötkönen Profile Picture">
+      </div>
+      <div class="section-text">
+        <p class="section-text-p1">Hello, My Name Is</p>
+        <h1 class="title">Niklas Rötkönen</h1>
+        <p id="typewriter" class="section-text-p2"></p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('assets/EnglishCV.pdf')">Download CV</button>
+          <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
+        </div>
+        <div id="socials-container">
+          <img src="assets/linkedin.png" alt="My Linkedin profile" class="icon" onclick="location.href='https://linkedin.com/in/niklas-rötkönen-7517a8155/'">
+          <img src="assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/rotkonen'">
+        </div>
+      </div>
     </section>
     <section id="about">
-      <div class="name">Niklas Rötkönen</div>
+      <p class="section-text-p1">Get To Know More</p>
+      <div class="section-container">
+        <div class="section-pic-container">
+          <img src="assets/profile.png" alt="Profile picture" class="about-pic"/>
+        </div>
+        <div class="about-details-container">
+          <h1 class="title-about">About Me</h1>
+          <div class="text-container">
+            <p>
+              Hi there!<br> 
+              I'm a Swedish-speaking Finn who is an aspiring web/full-stack developer with a passion for learning new technologies.
+              Started my studies at Arcada University of Applied Sciences and now finishing those studies at Metropolia University of Applied Sciences. My studies have been mostly based on web development, currently working on my thesis which should be done approximately in the spring/summer of 2024.
+              I have previously worked in technical support and as a summer trainee multiple times. Thanks to these jobs I've gotten better at problem-solving and learned multiple new IT skills and technologies.
+              Frontend technologies that I currently use are HTML, CSS and JavaScript (React, Vue, Angular) and the backend technologies are NodeJS, Express, PHP, Python and MongoDB. Lately been using C++ and Next.js in my studies as well.
+              If I'm not coding, I'm most likely spending time playing video games with my friends or spending time outdoors. 
+            </p>
+          </div>
+          <div class="about-containers">
+            <p class="tab-links active-link" onclick="openTab('workexperience')">Work Experience</p>
+            <p class="tab-links" onclick="openTab('education')">Education</p>
+          </div>
+          <div class="tab-containers active-tab" id="workexperience">
+            <ul>
+              <li><span class="cgi">CGI</span>Service Desk Specialist:<br>Providing technical support to end-users in various technical issues, including answering support questions and handling service requests.</li>
+              <li><span class="fortum">Fortum</span>Summer Trainee:<br>Software testing, maintenance of asset management system, as well as equipment installations, updates, maintenance, and user support.</li> 
+              <li><span class="fortum">Fortum</span>Summer Trainee:<br>RPA development, maintenance of asset management system, as well as equipment installations, updates, maintenance, and user support.</li>
+              <li><span class="fortum">Fortum</span>Summer Trainee:<br>Process IT. Server maintenance. Computer related problems.</li>
+            </ul>
+          </div>
+          <div class="tab-containers" id="education">
+            <ul>
+              <li><span class="metropolia">Metropolia</span>2022-2024<br>Bachelor of Engineering | Information and Communication Technology</li>
+              <li><span class="arcada">Arcada</span>2015-2021<br>Infortmation Technology</li> 
+            </ul>
+          </div>
+        </div>
+      </div>
+      <img src="assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#skills'"/>
     </section>
     <section id="skills">
-      <div class="name">Niklas Rötkönen</div>
+      <p class="section-text-p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="skills-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="skills-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img src="assets/checkmark.png" alt="Skills icon" class="icon"/>
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Skills icon" class="icon"/>
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Skills icon" class="icon"/>
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Skills icon" class="icon"/>
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="skills-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img src="assets/checkmark.png" alt="Skills icon" class="icon"/>
+                <div>
+                  <h3>Node.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Skills icon" class="icon"/>
+                <div>
+                  <h3>MongoDB</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Skills icon" class="icon"/>
+                <div>
+                  <h3>PHP</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Skills icon" class="icon"/>
+                <div>
+                  <h3>NoSQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="skills-sub-title">Other</h2>
+            <div class="article-container">
+              <article>
+                <img src="assets/checkmark.png" alt="Skills icon" class="icon"/>
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Skills icon" class="icon"/>
+                <div>
+                  <h3>C++</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Skills icon" class="icon"/>
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Skills icon" class="icon"/>
+                <div>
+                  <h3>Visual Studio Code</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#projects'"/>
     </section>
     <section id="projects">
-      <div class="name">Niklas Rötkönen</div>
+      <p class="section-text-p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="skills-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="assets/project-1.png" alt="Project 1" class="project-img"/>
+            </div>
+            <h2 class="skills-sub-title project-title">Angular Project</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="assets/project-2.png" alt="Project 2" class="project-img"/>
+            </div>
+            <h2 class="skills-sub-title project-title">Portfolio Project</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#contact'"/>
     </section>
     <section id="contact">
-      <div class="name">Niklas Rötkönen</div>
+      <p class="section-text-p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="assets/email.png" alt="Email icon" class="icon contact-icon email-icon"/>
+          <p><a href="mailto:niklas.rotkonen@hotmail.com">niklas.rotkonen@hotmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon"/>
+          <p><a href="https://linkedin.com/in/niklas-rötkönen-7517a8155/">LinkedIn</a></p>
+        </div>
+      </div>
     </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Niklas Rötkönen. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>

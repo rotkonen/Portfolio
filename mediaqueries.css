@@ -5,6 +5,8 @@
     }
     #mobile-nav{
         display: flex;
+        position: relative;
+        z-index: 9999;
     }
     #experience, .experience-details-container {
         margin-top: 2rem;
@@ -27,7 +29,17 @@
         margin: 0 auto 2rem;
     }
     .about-containers {
-        margin-top: 0;
+        margin-top: 2rem;
+        display: flex;
+    }
+    .tab-links {
+      margin-right: 20px;
+    }
+    .title-about{
+      text-align: center;
+    }
+    .section-text-p3{
+      text-align: center;
     }
 }
 

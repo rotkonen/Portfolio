@@ -4,6 +4,7 @@ function toggleMenu(){
     menu.classList.toggle("open")
     icon.classList.toggle("open")
 }
+
 var tablinks = document.getElementsByClassName("tab-links")
 var tabcontainers = document.getElementsByClassName("tab-containers")
 
@@ -18,7 +19,7 @@ function openTab(tabname){
   document.getElementById(tabname).classList.add("active-tab");
 }
 
-var dataText = ["Aspiring Web Developer", "Student","Gamer"]; // Add your text here
+var dataText = ["Aspiring Web Developer", "Student","Gamer"];
   var counter = 0;
   var element = document.getElementById("typewriter");
   

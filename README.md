@@ -12,4 +12,5 @@ This is my personal portfolio website showcasing my projects, skills, and experi
 
 ## Hosted:
 
+Website is hosted by GitHub pages.
 Portfolio is live: https://rotkonen.github.io/Portfolio/

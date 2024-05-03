@@ -19,7 +19,7 @@ function openTab(tabname){
   document.getElementById(tabname).classList.add("active-tab");
 }
 
-const dataText = ["Aspiring Web Developer", "Student","Gamer"];
+const dataText = ["Junior Web Developer", "Student","Gamer"];
   const counter = 0;
   const element = document.getElementById("typewriter");
   

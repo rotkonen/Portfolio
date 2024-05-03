@@ -48,3 +48,20 @@ const dataText = ["Aspiring Web Developer", "Student","Gamer"];
   }
   
   StartTextAnimation();
+
+const detailsContainers = document.querySelectorAll('.details-container');
+
+// Create a new IntersectionObserver
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    // If the container is in view, add the 'animated' class
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animated');
+    }
+  });
+}, { threshold: 0.5 }); // Adjust threshold as needed
+
+// Observe each details container
+detailsContainers.forEach((container) => {
+  observer.observe(container);
+});

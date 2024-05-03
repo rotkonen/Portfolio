@@ -5,8 +5,8 @@ function toggleMenu(){
     icon.classList.toggle("open")
 }
 
-var tablinks = document.getElementsByClassName("tab-links")
-var tabcontainers = document.getElementsByClassName("tab-containers")
+const tablinks = document.getElementsByClassName("tab-links")
+const tabcontainers = document.getElementsByClassName("tab-containers")
 
 function openTab(tabname){
   for(tablink of tablinks){
@@ -19,9 +19,9 @@ function openTab(tabname){
   document.getElementById(tabname).classList.add("active-tab");
 }
 
-var dataText = ["Aspiring Web Developer", "Student","Gamer"];
-  var counter = 0;
-  var element = document.getElementById("typewriter");
+const dataText = ["Aspiring Web Developer", "Student","Gamer"];
+  const counter = 0;
+  const element = document.getElementById("typewriter");
   
   function typeWriter(text, i, fnCallback) {
     if (i < (text.length)) {

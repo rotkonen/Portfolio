@@ -209,6 +209,24 @@ section {
     margin-bottom: 1rem;
 }
 
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.section-text-p1,
+.title,
+.section-text-p3 {
+    animation: slideInRight 0.5s ease forwards;
+}
+
 .section-text-p2 {
     font-size: 1.75rem;
     margin-bottom: 2rem;
@@ -260,10 +278,22 @@ section {
     justify-content: center;
     margin-top: 1rem;
     gap: 1rem;
+    animation: slideInLeft 0.5s ease forwards;
 }
 
+@keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
 .animated-img {
-    animation: pulse 2s infinite;
+    animation: pulse 2s;
 }
 
 @keyframes pulse {
@@ -272,7 +302,7 @@ section {
     }
 
     50% {
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
 
     100% {
@@ -360,6 +390,7 @@ section {
 .title-about {
     font-size: 3rem;
     margin-bottom: 1rem;
+    animation: slideInRight 0.5s ease forwards;
 }
 
 .tab-links {
@@ -423,6 +454,7 @@ section {
 
 .about-pic {
     border-radius: 2rem;
+    animation: slideInLeft 0.5s ease forwards;
 }
 
 .arrow {

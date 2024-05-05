@@ -1,9 +1,13 @@
+//Hamburger menu
+
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".mobile-icon");
   menu.classList.toggle("open")
   icon.classList.toggle("open")
 }
+
+//About me switching between work and education
 
 const tablinks = document.getElementsByClassName("tab-links")
 const tabcontainers = document.getElementsByClassName("tab-containers")
@@ -19,8 +23,10 @@ function openTab(tabname) {
   document.getElementById(tabname).classList.add("active-tab");
 }
 
+//Typewriter effect
+
 const dataText = ["Junior Software Developer", "Student", "Gamer"];
-const counter = 0;
+var counter = 0;
 const element = document.getElementById("typewriter");
 
 function typeWriter(text, i, fnCallback) {
@@ -49,6 +55,8 @@ function StartTextAnimation() {
 
 StartTextAnimation();
 
+//Animation for skills container
+
 const detailsContainers = document.querySelectorAll('.details-container');
 
 
@@ -64,3 +72,27 @@ const observer = new IntersectionObserver((entries) => {
 detailsContainers.forEach((container) => {
   observer.observe(container);
 });
+
+//Scroll fade-in
+
+function isInViewport(element) {
+  let rect = element.getBoundingClientRect();
+  let threshold = 0.3 * window.innerHeight;
+  return (
+    rect.top <= threshold &&
+    rect.bottom >= threshold
+  );
+}
+
+function addActiveClass() {
+  let sections = document.querySelectorAll('.fade-in');
+  sections.forEach(function (section) {
+    if (isInViewport(section)) {
+      section.classList.add('active');
+    }
+  });
+}
+
+addActiveClass();
+
+window.addEventListener('scroll', addActiveClass);

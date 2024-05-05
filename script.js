@@ -1,67 +1,66 @@
-function toggleMenu(){
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".mobile-icon");
-    menu.classList.toggle("open")
-    icon.classList.toggle("open")
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".mobile-icon");
+  menu.classList.toggle("open")
+  icon.classList.toggle("open")
 }
 
 const tablinks = document.getElementsByClassName("tab-links")
 const tabcontainers = document.getElementsByClassName("tab-containers")
 
-function openTab(tabname){
-  for(tablink of tablinks){
+function openTab(tabname) {
+  for (tablink of tablinks) {
     tablink.classList.remove("active-link");
   }
-  for(tabcontainer of tabcontainers){
+  for (tabcontainer of tabcontainers) {
     tabcontainer.classList.remove("active-tab");
   }
   event.currentTarget.classList.add("active-link");
   document.getElementById(tabname).classList.add("active-tab");
 }
 
-const dataText = ["Junior Web Developer", "Student","Gamer"];
-  const counter = 0;
-  const element = document.getElementById("typewriter");
-  
-  function typeWriter(text, i, fnCallback) {
-    if (i < (text.length)) {
-      element.innerHTML = text.substring(0, i+1);
-      setTimeout(function() {
-        typeWriter(text, i + 1, fnCallback)
-      }, 120);
-    }
-    else if (typeof fnCallback == 'function') {
-      setTimeout(fnCallback, 700);
-    }
+const dataText = ["Junior Software Developer", "Student", "Gamer"];
+const counter = 0;
+const element = document.getElementById("typewriter");
+
+function typeWriter(text, i, fnCallback) {
+  if (i < (text.length)) {
+    element.innerHTML = text.substring(0, i + 1);
+    setTimeout(function () {
+      typeWriter(text, i + 1, fnCallback)
+    }, 120);
   }
-  
-  function StartTextAnimation() {
-    if (counter < dataText.length) {
-      typeWriter(dataText[counter], 0, function(){
-        setTimeout(StartTextAnimation, 2000);
-      });
-      counter++;
-    } else {
-      counter = 0;
-      StartTextAnimation(); // Restart the loop
-    }
+  else if (typeof fnCallback == 'function') {
+    setTimeout(fnCallback, 700);
   }
-  
-  StartTextAnimation();
+}
+
+function StartTextAnimation() {
+  if (counter < dataText.length) {
+    typeWriter(dataText[counter], 0, function () {
+      setTimeout(StartTextAnimation, 2000);
+    });
+    counter++;
+  } else {
+    counter = 0;
+    StartTextAnimation();
+  }
+}
+
+StartTextAnimation();
 
 const detailsContainers = document.querySelectorAll('.details-container');
 
-// Create a new IntersectionObserver
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    // If the container is in view, add the 'animated' class
     if (entry.isIntersecting) {
       entry.target.classList.add('animated');
     }
   });
-}, { threshold: 0.5 }); // Adjust threshold as needed
+}, { threshold: 0.5 });
 
-// Observe each details container
+
 detailsContainers.forEach((container) => {
   observer.observe(container);
 });

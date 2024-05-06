@@ -542,7 +542,7 @@ article {
 }
 
 article:hover {
-    transform: translateY(-5px); /* Move the article upward on hover */
+    transform: translateY(-5px);
 }
 
 article .icon {

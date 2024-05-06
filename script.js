@@ -96,3 +96,9 @@ function addActiveClass() {
 addActiveClass();
 
 window.addEventListener('scroll', addActiveClass);
+
+//Opening links
+
+function openLink(url) {
+  window.open(url, '_blank');
+}

@@ -25,7 +25,7 @@ function openTab(tabname) {
 
 //Typewriter effect
 
-const dataText = ["Junior Software Developer", "Student", "Gamer"];
+const dataText = ["Junior Software Developer", "Bachelor of Engineering", "Gamer"];
 var counter = 0;
 const element = document.getElementById("typewriter");
 
